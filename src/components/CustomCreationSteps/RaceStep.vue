@@ -31,6 +31,7 @@ export default {
     },
     pickRace (chosenRace) {
       this.chooseRace(chosenRace)
+      this.$emit('nextStep')
     }
   }
 }

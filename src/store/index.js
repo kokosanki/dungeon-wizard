@@ -3,7 +3,8 @@ import { createStore } from 'vuex'
 const store = createStore({
   state: {
     characterClass: '',
-    characterRace: ''
+    characterRace: '',
+    characterAlignment: ''
   },
   getters: {
     characterClass: (state) => {
@@ -11,6 +12,9 @@ const store = createStore({
     },
     characterRace: (state) => {
       return state.characterRace
+    },
+    characterAlignment: (state) => {
+      return state.characterAlignment
     }
   },
   mutations: {
@@ -19,6 +23,9 @@ const store = createStore({
     },
     chooseRace (state, chosenRace) {
       state.characterRace = chosenRace
+    },
+    chooseAlignment (state, chosenAlignment) {
+      state.characterAlignment = chosenAlignment
     }
   },
   actions: {

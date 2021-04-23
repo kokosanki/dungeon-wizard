@@ -12,5 +12,11 @@ export default {
       .then(response => {
         return response.data.results
       })
+  },
+  getAlignments () {
+    return axios.get('/alignments')
+      .then(response => {
+        return response.data.results
+      })
   }
 }
