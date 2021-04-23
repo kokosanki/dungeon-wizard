@@ -2,17 +2,20 @@
   <div class="home">
     <h2>Create your DnD starter character</h2>
     <Menu
+      v-if="step === 0"
       @createCustom="startCustomCreation" @autogenerate="autogenerate" />
+      <custom-creation-steps v-else-if="step === 1" />
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
 import Menu from '@/components/Menu.vue'
+import CustomCreationSteps from '@/components/CustomCreationSteps/index.vue'
 
 export default {
   components: {
-    Menu
+    Menu,
+    CustomCreationSteps
   },
   data () {
     return {

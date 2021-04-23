@@ -1,7 +1,7 @@
 <template>
-  <div>
-    <button @click="chooseMode('custom')">Custom</button>
-    <button @click="chooseMode('generate')">Generate</button>
+  <div class="menu">
+    <button class="menu__button" @click="chooseMode('custom')">Custom</button>
+    <button class="menu__button" @click="chooseMode('generate')">Generate</button>
   </div>
 </template>
 
@@ -19,4 +19,7 @@ export default {
 </script>
 
 <style scoped>
+.menu__button {
+  cursor: pointer;
+}
 </style>
