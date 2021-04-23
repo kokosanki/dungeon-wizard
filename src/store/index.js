@@ -4,7 +4,8 @@ const store = createStore({
   state: {
     characterClass: '',
     characterRace: '',
-    characterAlignment: ''
+    characterAlignment: '',
+    characterBackground: ''
   },
   getters: {
     characterClass: (state) => {
@@ -15,6 +16,9 @@ const store = createStore({
     },
     characterAlignment: (state) => {
       return state.characterAlignment
+    },
+    characterBackground: (state) => {
+      return state.characterBackground
     }
   },
   mutations: {
@@ -26,6 +30,9 @@ const store = createStore({
     },
     chooseAlignment (state, chosenAlignment) {
       state.characterAlignment = chosenAlignment
+    },
+    chooseBackground (state, chosenBackground) {
+      state.characterBackground = chosenBackground
     }
   },
   actions: {
