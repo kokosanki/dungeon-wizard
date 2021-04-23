@@ -31,7 +31,7 @@ export default {
     },
     pickClass (chosenClass) {
       this.chooseClass(chosenClass)
-      this.$emit('updateStep', 2)
+      this.$emit('nextStep')
     }
   }
 }

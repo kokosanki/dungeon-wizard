@@ -1,6 +1,6 @@
 <template>
     <div>
-        <class-step @updateStep="updateStep" v-if="step === 1" />
+        <class-step @nextStep="nextStep" v-if="step === 1" />
         <race-step v-if="step === 2" />
     </div>
 </template>
@@ -16,8 +16,8 @@ export default {
     }
   },
   methods: {
-    updateStep (updatedStep) {
-      this.step = updatedStep
+    nextStep () {
+      this.step = ++this.step
     }
   }
 }
