@@ -6,5 +6,11 @@ export default {
       .then(response => {
         return response.data.results
       })
+  },
+  getRaces () {
+    return axios.get('/races')
+      .then(response => {
+        return response.data.results
+      })
   }
 }
