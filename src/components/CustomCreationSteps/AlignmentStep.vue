@@ -3,7 +3,7 @@
     <h2>Choose an alignment</h2>
     <ul>
       <li class="alignment-list" v-for="item in alignments" v-bind:key="item.index">
-        <button @click="pickAlignment(item.index)" class="alignment-list__item">
+        <button @click="pickAlignment(item.name)" class="alignment-list__item">
           {{ item.name }}
         </button>
       </li>
@@ -31,6 +31,7 @@ export default {
     },
     pickAlignment (chosenAlignment) {
       this.chooseAlignment(chosenAlignment)
+      this.$emit('nextStep')
     }
   }
 }

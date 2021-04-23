@@ -3,7 +3,7 @@
     <h2>Choose a class</h2>
     <ul>
       <li class="class-list" v-for="item in classes" v-bind:key="item.index">
-        <button @click="pickClass(item.index)" class="class-list__item">
+        <button @click="pickClass(item.name)" class="class-list__item">
           {{ item.name }}
         </button>
       </li>

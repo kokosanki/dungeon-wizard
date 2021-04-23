@@ -3,7 +3,7 @@
     <h2>Choose a race</h2>
     <ul>
       <li class="race-list" v-for="item in races" v-bind:key="item.index">
-        <button @click="pickRace(item.index)" class="race-list__item">
+        <button @click="pickRace(item.name)" class="race-list__item">
           {{ item.name }}
         </button>
       </li>
